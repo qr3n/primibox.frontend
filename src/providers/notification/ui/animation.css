@@ -1,0 +1,31 @@
+.pulseEffect {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 165, 0, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    animation: pulseAnimation 1s ease-out forwards;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+    }
+    50% {
+        width: 200px;
+        height: 200px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
+}
